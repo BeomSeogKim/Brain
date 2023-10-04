@@ -79,4 +79,7 @@ Strategy 방식은 크게 두가지로 나뉜다.
 
 파라미터로 Strategy를 전달받는 방식
 > Method의 파라미터로 Strategy를 받기 때문에 실행시 마다 유연하게 Strategy를 바꿔 사용할 수 있다.
-> 실행 시 마다 
+> 실행 시 마다 파라미터에 Strategy를 전달해야 한다. 
+> * 특히 파라미터로 Strategy를 전달받는 방식은 Spring에서 Template CallBack Pattern이라고 불린다.*
+
+
