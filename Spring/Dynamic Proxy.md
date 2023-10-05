@@ -3,7 +3,7 @@ Spring에서 주로 사용되는 동적 프록시 기술은 `JDK Dynamic Proxy`,
 
 ### JDK Dynamic Proxy
 
-JDK 동적 프록시는 인터페이스를 기반으로  프록시를 동적으로 생성한다. 그렇기에 인터페이스가 필수적이다. 
+JDK 동적 프록시는 **인터페이스**를 기반으로  프록시를 동적으로 생성한다. 그렇기에 인터페이스가 필수적이다. 
 
 #### Handler 구현
 ```java
@@ -76,4 +76,6 @@ enhancer.setCallback(new TimeMethodInterceptor(target));
 ConcreteService proxy = (ConcreteService) enhancer.create();
 ```
 - CGLIB는 Enhancer를 사용해 프록시를 생성한다. 
-set
+- `setSuperclass()`를 통해 상속받을 구체클래스를 지정한다. 
+- `setCallback()`을 통해 프록시에 적용할 로직을 할당한다.
+
