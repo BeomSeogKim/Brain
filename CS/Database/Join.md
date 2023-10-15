@@ -24,7 +24,29 @@ FROM <첫번째 테이블(LEFT)>
 [WHERE 검색 조건]
 ```
 
-LEFT OUTER JOIN의 경우 
+LEFT OUTER JOIN의 경우 첫번째 테이블에 내용이 존재한다면 결과가 검색이 된다.
+RIGHT OUTER JOIN의 경우 두번째 테이블에 내용이 존재한다면 결과가 검색이 된다.
+FULL OUTER JOIN의 경우 모든 결과가 검색이 된다. 
+
+##  CROSS JOIN
+한쪽 테이블의 한 행당 다른쪽 테이블의 모든 행을 하나씩 조인한다. 
+
+```sql
+SELECT <column 목록>
+FROM <첫번째 테이블>
+CROSS JOIN <두번째 테이블>
+```
+CROSS JOIN의 결과행의 개수는 첫번째 테이블 행의 개수 * 두번째 테이블 행의 개수이다. 
+*보통 Cartesian Product (카티션 곱) 이라고 한다.*
 
 
-## 
+## SELF JOIN
+자기자신의 테이블을 조인한다. 
+
+```sql 
+SELECT <column 목록>
+FROM <테이블>
+	INNER JOIN <테이블>
+	ON <조인 조건>
+[WHERE 검색 조건]
+```
